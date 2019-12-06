@@ -47,7 +47,6 @@ public class goalsActivity extends AppCompatActivity {
                 String g = addGoals.getText().toString();
                 if (!g.equals("")) {
                     goals.add(g);
-                    addGoals.setText("");
                     updateGoalsUI();
                 }
             }
@@ -59,7 +58,7 @@ public class goalsActivity extends AppCompatActivity {
         for (String s : goals) {
             View chunk = getLayoutInflater().inflate(R.layout.chunk_goals, forChunk, false);
             checkBox = chunk.findViewById(R.id.checkBox);
-            s= addGoals.getText().toString();
+            //String ss= addGoals.getText().toString();
             checkBox.setText(s);
             forChunk.addView(chunk);
         }
