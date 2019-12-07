@@ -2,27 +2,25 @@ package com.eshanazora.focus;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.gson.JsonObject;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import org.json.JSONObject;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -63,34 +61,12 @@ public class MainActivity extends AppCompatActivity {
                 goalsActivity();
             }
         });
-        motivationMode = findViewById(R.id.quote);
-        final RequestQueue queue = Volley.newRequestQueue(this);
-        final String url ="https://quote-garden.herokuapp.com/quotes/random";
+        motivationMode = findViewById(R.id.quotes);
 
         motivationMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 motivationActivity();
-                //send a request
-               quote = findViewById(R.id.quote);
-                // Instantiate the RequestQueue.
-                // Request a string response from the provided URL.
-//                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-//                        new Response.Listener<String>() {
-//                            @Override
-//                            public void onResponse(String response) {
-//                                // Display the first 500 characters of the response string.
-//                                quote.setText("Response is: "+ response.substring(0,500));
-//                            }
-//                        }, new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        quote.setText("No quote today.");
-//                    }
-//                });
-                // Add the request to the RequestQueue.
-                //queue.add(stringRequest);
-//
             }
         });
     }
@@ -104,8 +80,29 @@ public class MainActivity extends AppCompatActivity {
     }
     public void motivationActivity() {
         Intent motivation = new Intent(this, motivationActivity.class);
+//        RequestQueue queue = Volley.newRequestQueue(this);
+//        queue.start();
+//        quote = findViewById(R.id.quotes);
+//        // Instantiate the RequestQueue.
+//        //Request a string response from the provided URL.
+//        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,
+//                "https://quote-garden.herokuapp.com/quotes/random", null, new Response.Listener<JSONObject>() {
+//            @Override
+//            public void onResponse(JSONObject response) {
+//                // Display the first 500 characters of the response string.
+//                try {
+//                    System.out.println(response.getString("quoteText"));
+//                    quote.setText("Response is: " + response.getString("quoteText"));
+//                } catch (Exception e) {}
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                quote.setText("No quote today.");
+//            }
+//        });
+//        //Add the request to the RequestQueue.
+//        queue.add(request);
         startActivity(motivation);
     }
-
-
 }

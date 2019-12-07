@@ -84,7 +84,7 @@
             android:textColor="#ffffff" />
 
         <Button
-            android:id="@+id/quote"
+            android:id="@+id/quotes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#4CAF50"
