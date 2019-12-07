@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#009688"
+    android:background="@drawable/changingcolor_list"
     android:paddingTop="?attr/actionBarSize">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -24,7 +24,7 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00BCD4"
+        android:background="@drawable/changingcolor_list"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
-        android:background="#009688"
+        android:background="#00FFFFFF"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +47,7 @@
             android:id="@+id/focus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
             android:text="F O C U S"
             android:textAlignment="center"
             android:textColor="#ffffff"
@@ -60,7 +61,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="200dp"
         android:layout_marginBottom="200dp"
-        android:background="#009688"
+        android:background="#00FFFFFF"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -69,27 +70,32 @@
             android:id="@+id/study"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#4CAF50"
-            android:lineSpacingExtra="24sp"
+            android:backgroundTint="#00FFFFFF"
+            android:lineSpacingExtra="30sp"
             android:onClick="OnClick"
             android:text="Study"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/goal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#4CAF50"
+            android:backgroundTint="#00FFFFFF"
+            android:lineSpacingExtra="30sp"
             android:text="Goals"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/quotes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#4CAF50"
+            android:backgroundTint="#00FFFFFF"
+            android:lineSpacingExtra="30sp"
             android:text="Motivation"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

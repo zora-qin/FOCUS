@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/changingcolor_list"
     android:layout_height="match_parent">
 
     <TextView
@@ -14,7 +15,9 @@
         android:layout_marginEnd="8dp"
         android:text="STUDY"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +29,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
         android:layout_marginBottom="173dp"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#00FFFF00"
         android:text="Start"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -42,6 +46,7 @@
         android:layout_marginStart="140dp"
         android:layout_marginTop="248dp"
         android:text="60:00"
+        android:textColor="#FFFFFF"
         android:textSize="60sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +57,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
+        android:backgroundTint="#00FFFFFF"
         android:text="Back to Menu"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,6 +70,8 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="128dp"
         android:text="Don't even try to stop!"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
