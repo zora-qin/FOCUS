@@ -88,29 +88,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void motivationActivity() {
         Intent motivation = new Intent(this, motivationActivity.class);
-//        RequestQueue queue = Volley.newRequestQueue(this);
-//        queue.start();
-//        quote = findViewById(R.id.quotes);
-//        // Instantiate the RequestQueue.
-//        //Request a string response from the provided URL.
-//        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,
-//                "https://quote-garden.herokuapp.com/quotes/random", null, new Response.Listener<JSONObject>() {
-//            @Override
-//            public void onResponse(JSONObject response) {
-//                // Display the first 500 characters of the response string.
-//                try {
-//                    System.out.println(response.getString("quoteText"));
-//                    quote.setText("Response is: " + response.getString("quoteText"));
-//                } catch (Exception e) {}
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                quote.setText("No quote today.");
-//            }
-//        });
-//        //Add the request to the RequestQueue.
-//        queue.add(request);
         startActivity(motivation);
     }
 }
